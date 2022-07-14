@@ -133,7 +133,8 @@ set(SOURCE_FILES
         src/http/modules/ngx_http_upstream_least_conn_module.c
         src/http/modules/ngx_http_upstream_random_module.c
         src/http/modules/ngx_http_upstream_keepalive_module.c
-        src/http/modules/ngx_http_upstream_zone_module.c)
+        src/http/modules/ngx_http_upstream_zone_module.c
+        ngx_http_mytest_module.c)
 
 
 add_executable(nginx ${SOURCE_FILES})
