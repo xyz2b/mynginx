@@ -336,6 +336,7 @@ static char* ngx_http_mytest(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     return NGX_CONF_OK;
 }
 
+// ngx_http_module_t结构体中定义的初始化回调函数 会在 HTTP框架初始化时调用
 static ngx_http_module_t ngx_http_mytest_module_ctx = {
         NULL,                                           /* 4.preconfiguration */
         NULL,                                           /* 8.postconfiguration */
@@ -354,6 +355,7 @@ static ngx_http_module_t ngx_http_mytest_module_ctx = {
 #endif
 };
 
+// ngx_module_t结构体中定义的初始化回调函数 会在 Nginx启动时调用
 ngx_module_t ngx_http_mytest_module = {
         NGX_MODULE_V1,
         &ngx_http_mytest_module_ctx,                    /* module context */
